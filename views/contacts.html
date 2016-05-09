@@ -1,0 +1,22 @@
+<h1>Add Your Contacts Information</h1>
+
+    <div>
+        <form>
+            <input type="text" ng-model="list.fName" placeholder="Contact First Name">
+            <input type="text" ng-model="list.lName" placeholder="Contact Last Name">
+            <input type="text" ng-model="list.eMail" placeholder="Contact Email Address">
+            <button ng-click="addContact()">Add Contact</button>
+        </form>
+    </div>
+    
+    <div>
+        <h2>Your Contacts List</h2>        
+            <form>
+                <ul ng-repeat='list in contactLists | orderBy'>
+                    <li>{{list.lName}}, {{list.fName}}</li>
+                </ul>
+                <br>
+                <br>
+                <button ng-click="viewContact()">View Contact Info.</button>
+            </form>
+    </div>
